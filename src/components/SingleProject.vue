@@ -6,7 +6,7 @@
                 <span class="material-icons text-sm text-gray-400 hover:text-gray-600">
                     edit
                 </span>
-                <span class="material-icons text-sm text-gray-400 hover:text-gray-600">
+                <span @click="deleteProject" class="material-icons text-sm text-gray-400 hover:text-gray-600">
                     delete
                 </span>
                 <span class="material-icons text-sm text-gray-400 hover:text-gray-600">
@@ -25,7 +25,15 @@ export default {
     props: ['project'],
     data() {
         return {
-            showDetails: false
+            showDetails: false,
+            url: `http://localhost:3000/projects/${this.project.id}`
+        }
+    },
+    methods: {
+        deleteProject() {
+            fetch(this.url, { method: 'DELETE'})
+            .then(() => this.$emit('delete', this.project.id))
+            .catch(err => console.log(err.message))
         }
     }
 }
