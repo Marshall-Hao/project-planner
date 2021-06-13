@@ -3,9 +3,11 @@
         <div class="font-bold text-gray-600 text-md flex justify-between">
             <div @click="showDetails = !showDetails">{{ project.title }}</div>
             <div class="flex space-x-3 cursor-pointer">
-                <span class="material-icons text-sm text-gray-400 hover:text-gray-600">
-                    edit
-                </span>
+                <router-link :to="{ name: 'EditProject', params: { id: project.id}}">
+                    <span class="material-icons text-sm text-gray-400 hover:text-gray-600">
+                        edit
+                    </span>
+                </router-link>
                 <span @click="deleteProject" class="material-icons text-sm text-gray-400 hover:text-gray-600">
                     delete
                 </span>
