@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": 1,
-      "title": "fucker",
-      "details": "u motherfucker",
+      "title": "react",
+      "details": "next step",
       "complete": false
     },
     {
@@ -13,10 +13,28 @@
       "complete": true
     },
     {
-      "title": "fuck",
-      "details": "anal",
+      "title": "Vue",
+      "details": "learning it",
       "complete": true,
-      "id": 3
+      "id": 4
+    },
+    {
+      "title": "D3",
+      "details": " a good data visualisation library to see",
+      "complete": false,
+      "id": 5
+    },
+    {
+      "title": "JavaScript",
+      "details": " always to discover",
+      "complete": false,
+      "id": 6
+    },
+    {
+      "title": "rails",
+      "details": " a great ruby framework to master",
+      "complete": false,
+      "id": 7
     }
   ]
 }
